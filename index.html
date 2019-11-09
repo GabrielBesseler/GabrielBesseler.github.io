@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>CONTROLE IOT PADRÃO LUMINOTÉCNICO</h1>
+
+<p>RED</p>
+<button onclick="REDminus()">-</button>
+<button onclick="REDplus()">+</button>
+<p id="red">|||||</p>
+
+<p>GREEN</p>
+<button onclick="GREENminus()">-</button>
+<button onclick="GREENplus()">+</button>
+<p id="green">|||||</p>
+
+<p>BLUE</p>
+<button onclick="BLUEminus()">-</button>
+<button onclick="BLUEplus()">+</button>
+<p id="blue">|||||</p>
+
+<p>RELÉ</p>
+<button onclick="RELEoff()">OFF</button>
+<button onclick="RELEon()">ON</button>
+<p id="rele">OFF</p>
+
+
+<script>
+function REDminus() {
+    potencia = document.getElementById("red").innerHTML.length;
+    if (potencia > 1) document.getElementById("red").innerHTML = '|'.repeat(potencia-1)
+}
+function REDplus() {
+    potencia = document.getElementById("red").innerHTML.length;
+    if (potencia < 10) document.getElementById("red").innerHTML = '|'.repeat(potencia+1)
+}
+function GREENminus() {
+    potencia = document.getElementById("green").innerHTML.length;
+    if (potencia > 1) document.getElementById("green").innerHTML = '|'.repeat(potencia-1)
+}
+function GREENplus() {
+    potencia = document.getElementById("green").innerHTML.length;
+    if (potencia < 10) document.getElementById("green").innerHTML = '|'.repeat(potencia+1)
+}
+function BLUEminus() {
+    potencia = document.getElementById("blue").innerHTML.length;
+    if (potencia > 1) document.getElementById("blue").innerHTML = '|'.repeat(potencia-1)
+}
+function BLUEplus() {
+    potencia = document.getElementById("blue").innerHTML.length;
+    if (potencia < 10) document.getElementById("blue").innerHTML = '|'.repeat(potencia+1)
+}
+function RELEoff() {
+    if (document.getElementById("rele").innerHTML == "ON") document.getElementById("rele").innerHTML = "OFF"
+}
+function RELEon() {
+    if (document.getElementById("rele").innerHTML == "OFF") document.getElementById("rele").innerHTML = "ON"
+}
+</script>
+
+</body>
+</html>
